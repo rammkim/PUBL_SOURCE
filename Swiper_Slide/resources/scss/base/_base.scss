@@ -1,0 +1,32 @@
+@use '../helpers/' as *;
+
+html {
+    font-size: 16px;
+
+    // @include desktop {
+    //     font-size: 13px;
+    // }
+    @include tablet {
+        font-size: 16px;
+    }
+    @include mobile {
+        font-size: 11px;
+    }
+}
+
+html,
+body {
+    height: 100%;
+    min-height: rem(920px);
+    scroll-behavior: smooth;
+    word-break: keep-all;
+}
+
+body {
+    &.-noneScroll {
+        height: 100%;
+        min-height: 100%;
+        overflow: hidden;
+        touch-action: none;
+    }
+}

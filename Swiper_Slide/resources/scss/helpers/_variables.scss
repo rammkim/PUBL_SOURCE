@@ -1,0 +1,42 @@
+/*
+    COLOR
+*/
+$c-black: #000;
+$c-white: #fff;
+$c-light: #f5f5f5;
+$c-gray: #999;
+$c-btn: #001b61;
+$c-blue: #0075ff;
+$c-skyblue: #3cadff;
+$c-gradient: linear-gradient(#0066ff, $c-btn);
+
+$c-hf: #161935;
+
+/*
+    Z-INDEX
+*/
+$z-loading: 150;
+$z-banner: 60;
+$z-back-video: -1;
+$z-header: 50;
+$z-select: 10;
+$z-popup: 100;
+$z-title: 30;
+$z-fighter: 1;
+$z-back-name: -1;
+$z-world: 1;
+$z-event: 1;
+
+/*
+    PATH
+*/
+$path-image: '../images';
+
+/*
+    FONT-WEIGHT
+*/
+
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-bold: 700;
+$fw-black: 900;

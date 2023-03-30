@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SwiperSlide</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" href="./resources/css/style.min.css" />
+        <!-- SCRIPT -->
+        <script defer src="https://www.youtube.com/iframe_api"></script>
+        <script defer src="./resources/js/jquery.min.js"></script>
+        <script defer src="./resources/js/swiper.min.js"></script>
+        <script defer src="./resources/js/common.js"></script>
+    </head>
+    <body>
+        <!-- MEDIA -->
+        <article id="media" class="article media">
+            <div class="container">
+                <h2 class="media__title" data-translate="menu-media" data-translate-type="text">미디어</h2>
+                <div class="media__contents">
+                    <div class="media__swiper swiper">
+                        <ul class="media__swiper-wrapper swiper-wrapper">
+                            <li class="media__swiper-slide swiper-slide photo">
+                                <img src="./resources/images/photo_1.png" alt="photo" />
+                            </li>
+                            <li class="media__swiper-slide swiper-slide photo">
+                                <img src="./resources/images/photo_2.png" alt="photo" />
+                            </li>
+                            <li class="media__swiper-slide swiper-slide vod">
+                                <iframe src="https://www.youtube.com/embed/3XHe-zn1Aow" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </li>
+                            <li class="media__swiper-slide swiper-slide photo">
+                                <img src="./resources/images/photo_3.png" alt="photo" />
+                            </li>
+                            <li class="media__swiper-slide swiper-slide photo">
+                                <img src="./resources/images/photo_4.png" alt="photo" />
+                            </li>
+                            <li class="media__swiper-slide swiper-slide vod">
+                                <iframe src="https://www.youtube.com/embed/VR_QoF7k89I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            </li>
+                            <li class="media__swiper-slide swiper-slide photo">
+                                <img src="./resources/images/photo_6.png" alt="photo" />
+                            </li>
+                            <li class="media__swiper-slide swiper-slide photo">
+                                <img src="./resources/images/photo_7.png" alt="photo" />
+                            </li>
+                            <li class="media__swiper-slide swiper-slide photo">
+                                <img src="./resources/images/photo_8.png" alt="photo" />
+                            </li>
+                            <li class="media__swiper-slide swiper-slide photo">
+                                <img src="./resources/images/photo_9.png" alt="photo" />
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- button -->
+                    <button class="media__swiper-button swiper-button-left -left material-icons">chevron_left</button>
+                    <button class="media__swiper-button swiper-button-right -right material-icons">chevron_left</button>
+                </div>
+            </div>
+        </article>
+        <!-- POPUP -->
+        <div class="popup-wrap">
+            <div class="dimmed"></div>
+            <!-- popup-media-->
+            <div class="popup popup__media">
+                <div class="popup__contents popup__contents--photo">
+                    <img src="" alt="photo" />
+                </div>
+                <div class="popup__contents popup__contents--vod">
+                    <iframe src="" frameborder="0"></iframe>
+                </div>
+                <button class="popup__close material-icons">close</button>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,95 @@
+@use './variables' as *;
+@use './mediaQueries' as *;
+
+@function remove-unit($value) {
+    @return ($value / ($value * 0 + 1));
+}
+@function vw-t($px, $base: $tablet) {
+    @return (remove-unit($px * 100 / $base)) * 1vw;
+}
+@function vw-d($px, $base: $desktop) {
+    @return (remove-unit($px * 100 / $base)) * 1vw;
+}
+
+$base-rem-size: 16px;
+@function rem($px, $base: $base-rem-size) {
+    @return (remove-unit($px / $base)) * 1rem;
+}
+
+// FLEXBOX
+$flex-map: (
+    f-start: flex-start,
+    f-end: flex-end,
+    between: space-between,
+    around: space-around,
+    stretch: stretch,
+    center: center
+);
+
+@function _get-flex-value($key) {
+    @return map-get($flex-map, $key);
+}
+
+@mixin flexbox($j: center, $a: center, $d: row) {
+    display: flex;
+    justify-content: _get-flex-value($j);
+    align-items: _get-flex-value($a);
+    flex-direction: $d;
+}
+
+// POSITION
+@mixin position($p: absolute, $t: null, $r: null, $b: null, $l: null) {
+    position: $p;
+    top: $t;
+    right: $r;
+    bottom: $b;
+    left: $l;
+
+    @if $t==50% and $l ==50% {
+        transform: translate(-50%, -50%);
+    } @else if $t == 50% {
+        transform: translateY(-50%);
+    } @else if $l == 50% {
+        transform: translateX(-50%);
+    }
+}
+
+// BACKGROUND
+@mixin background-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+@mixin show {
+    &.-show {
+        display: block;
+    }
+}
+
+// SWIPER
+@mixin swiperBtn {
+    &-button {
+        font-size: rem(60px);
+        z-index: $z-select;
+        @include background-cover;
+
+        &.-left {
+            @include position($t: 50%, $l: 0);
+            @include mobile {
+                left: rem(-60px);
+            }
+        }
+        &.-right {
+            @include position($t: 50%, $r: 0);
+            transform: translateY(-50%) rotate(-180deg);
+            @include mobile {
+                right: rem(-60px);
+            }
+        }
+
+        &.swiper-button-disabled {
+            display: none;
+        }
+    }
+}
