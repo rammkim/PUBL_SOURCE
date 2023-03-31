@@ -1,0 +1,15 @@
+$mobile: 768px;
+
+@mixin mobile {
+    @media screen and (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin hover {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            @content;
+        }
+    }
+}

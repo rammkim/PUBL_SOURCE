@@ -1,0 +1,27 @@
+@use './variables' as *;
+@use './mediaQueries' as *;
+
+@mixin flex($align: center, $justify: center, $direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin custom-scroll($color: $c-primary, $back: #747474) {
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        width: 4px;
+        border-radius: 30px;
+    }
+
+    &::-webkit-scrollbar-track {
+        margin-top: 0.5em;
+        background-color: $back;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $color;
+    }
+}

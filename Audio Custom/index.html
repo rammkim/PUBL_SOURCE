@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Audio Custom</title>
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" href="./resources/css/style.min.css" />
+        <!-- SCRIPT -->
+        <script defer src="./resources/js/jquery.min.js"></script>
+        <script defer src="./resources/js/bgm-control.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Audio Custom / scss, js</h1>
+            <!-- BGM -->
+            <div id="bgm" class="bgm">
+                <div class="bgm__section">
+                    <ul class="bgm__list">
+                        <li class="bgm__item">
+                            <div class="bgm__wrap">
+                                <h3>01</h3>
+                                <p>Dragons and Knights</p>
+                            </div>
+                            <!-- bgm 1 -->
+                            <div class="bgm__wrap">
+                                <input type="range" id="seek0" class="seek 0" value="0" max="100" />
+                                <div class="length">0:55</div>
+                                <a class="bgm__play" data-audio="0" href="#">
+                                    <span class="material-icons">play_circle</span>
+                                </a>
+                            </div>
+                            <!-- -->
+                        </li>
+                        <li class="bgm__item">
+                            <div class="bgm__wrap">
+                                <h3>02</h3>
+                                <p>The Arrival of the Dragon Egg</p>
+                            </div>
+                            <!-- bgm 2 -->
+                            <div class="bgm__wrap">
+                                <input type="range" id="seek1" class="seek 1" value="0" max="100" />
+                                <div class="length">0:35</div>
+                                <a class="bgm__play" data-audio="1" href="#">
+                                    <span class="material-icons">play_circle</span>
+                                </a>
+                            </div>
+                            <!-- -->
+                        </li>
+                        <li class="bgm__item">
+                            <div class="bgm__wrap">
+                                <h3>03</h3>
+                                <p>Battle on the Field</p>
+                            </div>
+                            <!-- bgm 3 -->
+                            <div class="bgm__wrap">
+                                <input type="range" id="seek2" class="seek 2" value="0" max="100" />
+                                <div class="length">1:52</div>
+                                <a class="bgm__play" data-audio="2" href="#">
+                                    <span class="material-icons">play_circle</span>
+                                </a>
+                            </div>
+                            <!-- -->
+                        </li>
+                        <li class="bgm__item">
+                            <div class="bgm__wrap">
+                                <h3>04</h3>
+                                <p>Dragon Nest</p>
+                            </div>
+                            <!-- bgm 4 -->
+                            <div class="bgm__wrap">
+                                <input type="range" id="seek3" class="seek 3" value="0" max="100" />
+                                <div class="length">1:40</div>
+                                <a class="bgm__play" data-audio="3" href="#">
+                                    <span class="material-icons">play_circle</span>
+                                </a>
+                            </div>
+                            <!-- -->
+                        </li>
+                        <li class="bgm__item">
+                            <div class="bgm__wrap">
+                                <h3>05</h3>
+                                <p>Heave-ho! Repair the Village!</p>
+                            </div>
+                            <!-- bgm 5 -->
+                            <div class="bgm__wrap">
+                                <input type="range" id="seek4" class="seek 4" value="0" max="100" />
+                                <div class="length">1:09</div>
+                                <a class="bgm__play" data-audio="4" href="#">
+                                    <span class="material-icons">play_circle</span>
+                                </a>
+                            </div>
+                            <!-- -->
+                        </li>
+                        <li class="bgm__item">
+                            <div class="bgm__wrap">
+                                <h3>06</h3>
+                                <p>The Undead Commander</p>
+                            </div>
+                            <!-- bgm 6 -->
+                            <div class="bgm__wrap">
+                                <input type="range" id="seek5" class="seek 5" value="0" max="100" />
+                                <div class="length">1:20</div>
+                                <a class="bgm__play" data-audio="5" href="#">
+                                    <span class="material-icons">play_circle</span>
+                                </a>
+                            </div>
+                            <!-- -->
+                        </li>
+                        <li class="bgm__item">
+                            <div class="bgm__wrap">
+                                <h3>07</h3>
+                                <p>The Beginning of War</p>
+                            </div>
+                            <!-- bgm 7 -->
+                            <div class="bgm__wrap">
+                                <input type="range" id="seek6" class="seek 6" value="0" max="100" />
+                                <div class="length">1:04</div>
+                                <a class="bgm__play" data-audio="6" href="#">
+                                    <span class="material-icons">play_circle</span>
+                                </a>
+                            </div>
+                            <!-- -->
+                        </li>
+                        <li class="bgm__item">
+                            <div class="bgm__wrap">
+                                <h3>08</h3>
+                                <p>Enemy Invasion</p>
+                            </div>
+                            <!-- bgm 8 -->
+                            <div class="bgm__wrap">
+                                <input type="range" id="seek7" class="seek 7" value="0" max="100" />
+                                <div class="length">0:53</div>
+                                <a class="bgm__play" data-audio="7" href="#">
+                                    <span class="material-icons">play_circle</span>
+                                </a>
+                            </div>
+                            <!-- -->
+                        </li>
+                        <li class="bgm__item">
+                            <div class="bgm__wrap">
+                                <h3>09</h3>
+                                <p>The Labyrinth</p>
+                            </div>
+                            <!-- bgm 9 -->
+                            <div class="bgm__wrap">
+                                <input type="range" id="seek8" class="seek 8" value="0" max="100" />
+                                <div class="length">0:40</div>
+                                <a class="bgm__play" data-audio="8" href="#">
+                                    <span class="material-icons">play_circle</span>
+                                </a>
+                            </div>
+                            <!-- -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
