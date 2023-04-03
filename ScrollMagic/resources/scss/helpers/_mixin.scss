@@ -1,0 +1,50 @@
+@use './variables' as *;
+@use './_mediaQueries' as *;
+
+@function remove-unit($value) {
+    @return ($value / ($value * 0 + 1));
+}
+
+// $base-rem-size: 16px;
+@function rem($px, $base: 16px) {
+    @return (remove-unit($px / $base)) * 1rem;
+}
+
+// FLEXBOX
+$flex-map: (
+    f-start: flex-start,
+    f-end: flex-end,
+    between: space-between,
+    around: space-around,
+    stretch: stretch,
+    center: center
+);
+
+@function _get-flex-value($key) {
+    @return map-get($flex-map, $key);
+}
+
+@mixin flexbox($j: center, $a: center) {
+    display: flex;
+    justify-content: _get-flex-value($j);
+    align-items: _get-flex-value($a);
+}
+
+// SCROLL BAR
+@mixin scrollbar-y($color: $c-simbol-navy) {
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    &::-webkit-scrollbar {
+        width: 3px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $c-bar;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        width: 3px;
+        background-color: $c-simbol-yellow;
+    }
+}

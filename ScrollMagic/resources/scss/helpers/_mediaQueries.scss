@@ -1,0 +1,66 @@
+// $retina: 1600px;
+// $desktop: 1100px;
+// $mobile: 640px;
+
+// Break Point
+$desktop: 1600px;
+
+$laptop: 1280px;
+$screen: 1050px;
+$tablet: 800px;
+$mobile: 440px;
+// $s-mobile: 450px;
+
+// Desktop
+@mixin desktop {
+    @media screen and (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+// Laptop
+@mixin laptop {
+    @media screen and (max-width: #{$laptop}) {
+        @content;
+    }
+}
+
+@mixin screen {
+    @media screen and (max-width: #{$screen}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media screen and (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin custom($width) {
+    @media screen and (min-width: #{$width}) {
+        @content;
+    }
+}
+
+@mixin br($br) {
+    @media screen and (max-width: #{$br}) {
+        br {
+            display: none !important;
+        }
+    }
+}
+
+@mixin hover {
+    @media (hover: hover) and (pointer: fine) {
+        &:hover {
+            @content;
+        }
+    }
+}
